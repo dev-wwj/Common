@@ -13,7 +13,23 @@ public extension UIScreen {
         return UIScreen.main.bounds.width
     }
     
-    public enum ScreenShape: Int {
+    static var height: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
+    static var statusBarHeight: CGFloat {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        } else {
+            return UIApplication.shared.statusBarFrame.height
+        }
+    }
+    
+    static var safebottom: CGFloat {
+        return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+    }
+    
+    enum ScreenShape: Int {
         case Notch = 1      // 刘海
         case Island = 2     // 灵动岛
         case none = 0       // 默认
@@ -211,22 +227,22 @@ public extension UIScreen {
     
     struct DynamicIsland {
         /// The size of the Dynamic Island cutout.
-        public static var size: CGSize  {
+        static var size: CGSize  {
           return .init(width: 126.0, height: 37.33)
         }
         
         /// The starting position of the Dynamic Island cutout.
-        public static var origin: CGPoint  {
+        static var origin: CGPoint  {
           return .init(x: UIScreen.main.bounds.midX - size.width / 2, y: 11)
         }
         
         /// A rect that has the size and position of the Dynamic Island cutout.
-        public static var rect: CGRect  {
+        static var rect: CGRect  {
           return .init(origin: origin, size: size)
         }
         
         /// The corner radius of the Dynamic Island cutout.
-        public static var cornerRadius: CGFloat {
+        static var cornerRadius: CGFloat {
           return size.width / 2
         }
     }

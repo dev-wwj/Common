@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of Common.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/wwj/Common",
+  "homepage": "https://github.com/dev-wwj/Common",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "wwj": "fyddwwj@hotmail.com"
   },
   "source": {
-    "git": "https://github.com/wwj/Common.git",
+    "git": "git@github.com:dev-wwj/Common.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "12.0"
   },
   "source_files": "Common/Classes/**/*"
 }

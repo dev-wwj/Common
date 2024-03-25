@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Common
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let star = "ddgdsdada"
+        if star.isValidPhoneNumber {
+            print("")
+        }
     }
 
     override func didReceiveMemoryWarning() {

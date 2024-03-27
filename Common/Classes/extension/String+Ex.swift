@@ -48,3 +48,56 @@ public extension String {
         return Range(uncheckedBounds: (lower: startIndex, upper: validEndIndex))
     }
 }
+
+public extension String {
+    /// KMP 查找字符串
+    /// - Parameter p: 子字符串
+    /// - Returns: 子字符串所在位置集合
+    func kmpFindAll(_ p: String) -> [NSRange] {
+        var ranges: [NSRange] = []
+        let n = self.count
+        let m = p.count
+        let t = computePrefix(p)
+        var q = 0
+        for i in 0 ..< n {
+            while q > 0, p.getCharacter(q) != self.getCharacter(i) {
+                q = t[q]
+            }
+            if p.getCharacter(q) == self.getCharacter(i) {
+                q += 1
+            }
+            if q == m {
+                ranges.append(NSRange(location: i + 1 - m, length: m))
+                q = t[q]
+            }
+        }
+        return ranges
+    }
+
+    /// 计算KMP 对应前缀函数 数组
+    /// - Parameter p:
+    /// - Returns:
+    fileprivate func computePrefix(_ p: String) -> [Int] {
+        let m = p.count
+        var t = Array(repeating: 0, count: m + 1)
+        var k = 0
+        for q in 1 ..< m {
+            while k > 0, p.getCharacter(k) != p.getCharacter(q) {
+                k = t[k]
+            }
+            if p.getCharacter(k) == p.getCharacter(q) {
+                k += 1
+            }
+            t[q] = k
+        }
+        return t
+    }
+
+    /// 获取字符串中的字符
+    /// - Parameter index: 字符位置
+    /// - Returns: 字符
+    fileprivate func getCharacter(_ index: Int) -> Character {
+        let index = self.index(self.startIndex, offsetBy: index)
+        return self[index]
+    }
+}

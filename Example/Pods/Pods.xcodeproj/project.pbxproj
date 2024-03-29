@@ -33,6 +33,7 @@
 		F0EA150D2BB414A800AD7B4E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F0EA14FB2BB414A800AD7B4E /* .gitkeep */; };
 		F0EA150E2BB414A800AD7B4E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F0EA14FD2BB414A800AD7B4E /* .gitkeep */; };
 		F0EA15232BB64E7F00AD7B4E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EA15222BB64E7F00AD7B4E /* UIButton+Extension.swift */; };
+		F0EA15252BB6521200AD7B4E /* sources_put_here.md in Resources */ = {isa = PBXBuildFile; fileRef = F0EA15242BB6521200AD7B4E /* sources_put_here.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		F0EA14FB2BB414A800AD7B4E /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F0EA14FD2BB414A800AD7B4E /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F0EA15222BB64E7F00AD7B4E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		F0EA15242BB6521200AD7B4E /* sources_put_here.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = sources_put_here.md; sourceTree = "<group>"; };
 		F6FB8D3B73B942B4C5E69082D7B1F354 /* Pods-Common_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Common_Example.modulemap"; sourceTree = "<group>"; };
 		F9513A36E423C884DADCEAFD4E847616 /* Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Common.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F0EA14FD2BB414A800AD7B4E /* .gitkeep */,
+				F0EA15242BB6521200AD7B4E /* sources_put_here.md */,
 			);
 			name = Assets;
 			path = Common/Assets;
@@ -432,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EA15252BB6521200AD7B4E /* sources_put_here.md in Resources */,
 				F0EA150D2BB414A800AD7B4E /* .gitkeep in Resources */,
 				F0EA150E2BB414A800AD7B4E /* .gitkeep in Resources */,
 			);

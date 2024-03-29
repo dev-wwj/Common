@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Common'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of Common.'
 
 # This description is used to generate tags and improve search results.
@@ -30,11 +30,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Common/Classes/**/*'
+  s.source_files = 'Common/Classes/**/*.swift'
   
-  # s.resource_bundles = {
-  #   'Common' => ['Common/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'Common' => ['Common/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
